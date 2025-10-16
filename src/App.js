@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+import React from 'react'; 
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'; 
+import Home from './components/Home'; 
+import Register from './components/register/Register'; 
+import PersonalInfo from './components/register/PersonalInfo'; 
+import ContactInfo from './components/register/ContactInfo'; 
+import Confirmation from './components/register/Confirmation'; 
+ 
+function App() { 
+  return (  
+    <BrowserRouter> 
+      <div className="app"> 
+        <nav style={{ padding: '20px', borderBottom: '1px solid #ccc' }}> 
+          <Link to="/" style={{ marginRight: '15px' }}>Inicio</Link> 
+          <Link to="/register">Registrarse</Link> 
+        </nav> 
+ 
+        <Routes> 
+          <Route path="/" element={<Home />} /> 
+          <Route path="/register" element={<Register />}> 
+            <Route path="personal" element={<PersonalInfo />} /> 
+            <Route path="contact" element={<ContactInfo />} /> 
+            <Route path="confirmation" element={<Confirmation />} /> 
+          </Route> 
+        </Routes> 
+      </div> 
+    </BrowserRouter> 
+  ); 
+} 
