@@ -1,3 +1,5 @@
+Link para la presentacion: https://www.canva.com/design/DAG1q-FT9Dg/BpQZg92opNyR-8gu0CvDIQ/edit?utm_content=DAG1q-FT9Dg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
